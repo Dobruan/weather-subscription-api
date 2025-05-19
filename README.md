@@ -35,7 +35,7 @@ DATABASE_PORT=5432
 DATABASE_USER=postgres
 DATABASE_PASSWORD=postgres
 DATABASE_NAME=weather
-
+PORT=3000
 WEATHER_API_KEY=your_weather_api_key
 MAILTRAP_USER=your_mailtrap_user
 MAILTRAP_PASS=your_mailtrap_pass
@@ -135,19 +135,21 @@ src/
 
 ---
 
-## Possible Improvements   
- 1. Multi-city Subscriptions per User
+## Possible Improvements
+ 1. **User-specific Delivery Time**  
+    Allow users to choose a preferred hour for receiving daily updates (e.g. 8:00 AM). Currently, delivery is tied to a global CRON schedule. This would require implementing per-user scheduling or a more dynamic job queue.
+ 2. **Location by Coordinates**   
+    Allow users to subscribe by providing GPS coordinates (latitude and longitude), not only city names. This would improve accuracy and support less-populated areas or specific locations.
+ 3. ***Multi-city Subscriptions per User***  
 Extend the data model to support users subscribing to weather updates for multiple cities. This would require a separate User entity and a one-to-many relation with Subscription.
-
-  2. Two-Factor Authentication (2FA)
+ 4. **Two-Factor Authentication (2FA)**
 Introduce 2FA for additional security. During confirmation or account login (if user accounts are added), users would be required to enter a verification code sent to their email.
 
- 3. Location by Coordinates 
-Allow users to subscribe by providing GPS coordinates (latitude and longitude), not only city names. This would improve accuracy and support less-populated areas or specific locations.
+
 
 
 ---
 
 ## 👨‍💻 Author
 
-Developed as part of a technical assignment.
+Developed as part of a technical assignment for **GENESIS Software Engineering School 5.0**.
